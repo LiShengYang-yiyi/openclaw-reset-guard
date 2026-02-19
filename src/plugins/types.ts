@@ -417,6 +417,10 @@ export type PluginHookBeforeResetEvent = {
   sessionFile?: string;
   messages?: unknown[];
   reason?: string;
+  /** Set true to cancel /new|/reset and keep current session. */
+  cancel?: boolean;
+  /** Optional message shown to the user when reset is cancelled. */
+  message?: string;
 };
 
 export type PluginHookAfterCompactionEvent = {
